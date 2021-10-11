@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Increment from "./components/increment";
 function App() {
   const [hello, setHello] = useState("dark");
