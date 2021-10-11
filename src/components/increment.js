@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from '../actions';
 const Increment = ({setHello, hello})=>{
     const counter = useSelector(state=> state.counter)
     const isLogged = useSelector(state=> state.isLogged)
     const dispatch = useDispatch();
-    console.log(hello)
+    console.log(hello + 'child reinstantiated')
+    useEffect(()=>{
+        console.log('child rerendered')
+    })
     return (
       <div className="Hello">
         <h1>Counter {counter}</h1>
