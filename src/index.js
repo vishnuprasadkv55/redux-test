@@ -7,6 +7,7 @@ import { createStore } from "redux";
 import allReducers from "./reducers";
 import { Provider } from "react-redux";
 import { CounterProvider } from "./context/counter-context";
+import { AllProvider } from "./context";
 
 const store = createStore(
   allReducers,
@@ -14,11 +15,11 @@ const store = createStore(
 );
 ReactDOM.render(
   <React.StrictMode>
-    <CounterProvider>
+    <AllProvider>
       <Provider store={store}>
         <App />
       </Provider>
-    </CounterProvider>
+    </AllProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
