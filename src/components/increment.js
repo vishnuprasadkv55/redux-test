@@ -12,7 +12,7 @@ const Increment = ({setHello, hello})=>{
     return (
       <div className="Hello">
         <h1>Counter {counter}</h1>
-        <button onClick={()=> setHello('dark changed' + Math.random())} >change parent</button>
+        <button onClick={()=> setHello('dark changed' + Math.random())} >change parent from child</button>
         <button onClick={()=> dispatch(increment(5))} >+</button>
         <button onClick={()=> dispatch(decrement())}>-</button>
         {isLogged && <h3>Valuable information I shouldn't see</h3>}
