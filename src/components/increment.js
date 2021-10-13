@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../actions";
 import { useCounter } from "../context/counter-context";
 import { useUser } from "../context/logged-context";
+import Child from "./child";
 const Increment = ({ setHello, hello }) => {
   const counter = useSelector((state) => state.counter);
   const isLogged = useSelector((state) => state.isLogged);
@@ -31,6 +32,7 @@ const Increment = ({ setHello, hello }) => {
       <button onClick={() => setHello("dark changed" + Math.random())}>
           change parent from child
         </button>
+        <Child/>
     </div>
   );
 };
